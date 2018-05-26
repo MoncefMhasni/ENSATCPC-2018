@@ -2,7 +2,7 @@
 #define t second
 #define w first
 #define inf 1e20
-#define eps 1e-7
+#define eps 1e-10
 #define pl pair<double,double>
 using namespace std;
 int main(){
@@ -32,6 +32,6 @@ int main(){
                 for(int k=0;k< t[j].size();k++) cc+=  fabs(t[j][k]-t[1][i])<eps ;
                 if(cc == v.size()-1)ans = min(t[1][i],ans);
         }
-       if(!ok ||ans >= maxx) cout<<"-1\n";
+       if(!ok ||ans > maxx) cout<<"-1\n";
        else cout<<ans<<endl;
 }
